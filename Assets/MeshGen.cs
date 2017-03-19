@@ -7,8 +7,11 @@ public class MeshGen : MonoBehaviour
 
     public float size;
 
+    
     public int xRes = 2;
     public int zRes = 2;
+
+
     Mesh mesh;
     // Use this for initialization
     void Start()
@@ -53,9 +56,38 @@ public class MeshGen : MonoBehaviour
         {
             for (int j = 0; j < zRes; j++)
             {
-                uvs[i + j * xRes] = new Vector2((float)j / (xRes - 1),(float)i / (zRes - 1)
+                uvs[i + j * xRes] = new Vector2((float)j / (xRes - 1),(float)i / (zRes - 1));
             }
         }
+
+        //
+        //  TRIANGLES
+        //
+
+        int faces = (xRes - 1) * (zRes - 1);
+        int[] triangles = new int[faces * 6];       //who knows why
+        int a = 0;
+        for(int i = 0; i< faces; i++)
+        {
+            //% GETS REMAINDER
+            int j = i % (xRes - 1) + (i / (zRes - 1) * xRes);   //gets lowest left vert (basically 0)
+
+            triangles[a++] = j + xRes;
+            triangles[a++] = j + 1;
+            triangles[a++] = j;
+
+            triangles[a++] = j + xRes;
+            triangles[a++] = j + xRes + 1;
+            triangles[a++] = j + 1;
+        }
+
+        mesh.vertices = verts;
+        mesh.normals = normals;
+        mesh.uv = uvs;
+        mesh.triangles = triangles;
+
+        mesh.RecalculateBounds();
+
 
         /*mesh.vertices = new Vector3[]           //Assign verts
         {   
