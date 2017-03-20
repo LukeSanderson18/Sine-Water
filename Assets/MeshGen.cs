@@ -85,7 +85,6 @@ public class MeshGen : MonoBehaviour
         mesh.normals = normals;
         mesh.uv = uvs;
         mesh.triangles = triangles;
-
         mesh.RecalculateBounds();
 
 
