@@ -7,7 +7,7 @@ public class MeshGen : MonoBehaviour
 
     public float size;
 
-    
+    public Vector3[] verts;
     public int xRes = 2;
     public int zRes = 2;
 
@@ -21,7 +21,7 @@ public class MeshGen : MonoBehaviour
         //mesh = new Mesh();                      //Create new mesh
         mesh.Clear();
         mesh.name = "Wave";
-        Vector3[] verts = new Vector3[xRes * zRes];     //Inst vertices
+         verts = new Vector3[xRes * zRes];     //Inst vertices
         Vector3[] normals = new Vector3[verts.Length];  //Inst normals
         Vector2[] uvs = new Vector2[verts.Length];      //Inst uvs
 
