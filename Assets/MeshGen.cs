@@ -11,6 +11,8 @@ public class MeshGen : MonoBehaviour
     public int xRes = 2;
     public int zRes = 2;
 
+    public GameObject grid;
+
 
     Mesh mesh;
     // Use this for initialization
@@ -87,6 +89,8 @@ public class MeshGen : MonoBehaviour
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
 
+        //grid.transform.localScale = Vector3.one * (size * 0.05f);
+
 
         /*mesh.vertices = new Vector3[]           //Assign verts
         {   
@@ -111,7 +115,9 @@ public class MeshGen : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
          * /*/
 
-        ;
+        
     }
+
+    
 
 }
