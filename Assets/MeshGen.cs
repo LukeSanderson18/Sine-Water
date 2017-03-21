@@ -18,6 +18,11 @@ public class MeshGen : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (!PlayerPrefs.HasKey("size"))
+        {
+            PlayerPrefs.SetFloat("size", 5);
+        }
+        size = PlayerPrefs.GetFloat("size");
         MeshFilter meshFilter = GetComponent<MeshFilter>();
         mesh = meshFilter.mesh;
         //mesh = new Mesh();                      //Create new mesh
