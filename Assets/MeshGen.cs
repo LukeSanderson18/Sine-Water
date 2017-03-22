@@ -22,7 +22,86 @@ public class MeshGen : MonoBehaviour
         {
             PlayerPrefs.SetFloat("size", 5);
         }
-        size = PlayerPrefs.GetFloat("size");
+        else
+        {
+            size = PlayerPrefs.GetFloat("size");
+        }
+
+        if (!PlayerPrefs.HasKey("reso"))
+        {
+            PlayerPrefs.SetInt("reso", 50);
+        }
+        else
+        {
+            xRes = PlayerPrefs.GetInt("reso");
+        }
+
+        if (!PlayerPrefs.HasKey("height"))
+        {
+            PlayerPrefs.SetFloat("height", 0.5f);
+        }
+        else
+        {
+            size = PlayerPrefs.GetFloat("height");
+        }
+
+        //
+
+        if (!PlayerPrefs.HasKey("scale"))
+        {
+            PlayerPrefs.SetFloat("scale", 1);
+        }
+        else
+        {
+            size = PlayerPrefs.GetFloat("scale");
+        }
+
+        //
+
+        if (!PlayerPrefs.HasKey("speed"))
+        {
+            PlayerPrefs.SetFloat("speed", 1);
+        }
+        else
+        {
+            size = PlayerPrefs.GetFloat("speed");
+        }
+
+        //
+
+        if (!PlayerPrefs.HasKey("noise"))
+        {
+            PlayerPrefs.SetFloat("noise", 0);
+        }
+        else
+        {
+            size = PlayerPrefs.GetFloat("noise");
+        }
+
+        //
+
+        if (!PlayerPrefs.HasKey("xmult"))
+        {
+            PlayerPrefs.SetFloat("xmult", 1);
+        }
+        else
+        {
+            size = PlayerPrefs.GetFloat("xmult");
+        }
+
+        //
+
+        if (!PlayerPrefs.HasKey("zmult"))
+        {
+            PlayerPrefs.SetFloat("zmult", 1);
+        }
+        else
+        {
+            size = PlayerPrefs.GetFloat("zmult");
+        }
+        //for simplicities sake
+        zRes = xRes;
+
         MeshFilter meshFilter = GetComponent<MeshFilter>();
         mesh = meshFilter.mesh;
         //mesh = new Mesh();                      //Create new mesh
