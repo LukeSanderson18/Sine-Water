@@ -25,6 +25,7 @@ public class MeshGen : MonoBehaviour
         else
         {
             size = PlayerPrefs.GetFloat("size");
+            print(size);
         }
 
         if (!PlayerPrefs.HasKey("reso"))
@@ -36,69 +37,7 @@ public class MeshGen : MonoBehaviour
             xRes = PlayerPrefs.GetInt("reso");
         }
 
-        if (!PlayerPrefs.HasKey("height"))
-        {
-            PlayerPrefs.SetFloat("height", 0.5f);
-        }
-        else
-        {
-            size = PlayerPrefs.GetFloat("height");
-        }
-
-        //
-
-        if (!PlayerPrefs.HasKey("scale"))
-        {
-            PlayerPrefs.SetFloat("scale", 1);
-        }
-        else
-        {
-            size = PlayerPrefs.GetFloat("scale");
-        }
-
-        //
-
-        if (!PlayerPrefs.HasKey("speed"))
-        {
-            PlayerPrefs.SetFloat("speed", 1);
-        }
-        else
-        {
-            size = PlayerPrefs.GetFloat("speed");
-        }
-
-        //
-
-        if (!PlayerPrefs.HasKey("noise"))
-        {
-            PlayerPrefs.SetFloat("noise", 0);
-        }
-        else
-        {
-            size = PlayerPrefs.GetFloat("noise");
-        }
-
-        //
-
-        if (!PlayerPrefs.HasKey("xmult"))
-        {
-            PlayerPrefs.SetFloat("xmult", 1);
-        }
-        else
-        {
-            size = PlayerPrefs.GetFloat("xmult");
-        }
-
-        //
-
-        if (!PlayerPrefs.HasKey("zmult"))
-        {
-            PlayerPrefs.SetFloat("zmult", 1);
-        }
-        else
-        {
-            size = PlayerPrefs.GetFloat("zmult");
-        }
+        
         //for simplicities sake
         zRes = xRes;
 
@@ -173,32 +112,7 @@ public class MeshGen : MonoBehaviour
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
 
-        //grid.transform.localScale = Vector3.one * (size * 0.05f);
-
-
-        /*mesh.vertices = new Vector3[]           //Assign verts
-        {   
-            new Vector3(-size,-size,0.001f),
-            new Vector3(size,-size,0.001f),
-            new Vector3(size,size,0.001f),
-            new Vector3(-size,size,0.001f),
-        };
-        mesh.uv = new Vector2[]                 //Assign UV cords for texture
-        {
-            new Vector2(0,0),
-            new Vector2(0,1),
-            new Vector2(1,1),
-            new Vector2(1,0)
-        };
-        mesh.triangles = new int[]              //Assign tris (good for normals later)
-        {
-            0,2,1, 0,3,2
-        };
-        mesh.RecalculateNormals();              //Recalculate everything;
-
-        GetComponent<MeshFilter>().mesh = mesh;
-         * /*/
-
+       
         
     }
 
