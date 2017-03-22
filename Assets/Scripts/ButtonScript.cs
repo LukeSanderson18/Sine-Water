@@ -46,4 +46,9 @@ public class ButtonScript : MonoBehaviour {
             sliders[7].value = 1;
             Application.LoadLevel(Application.loadedLevel);
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

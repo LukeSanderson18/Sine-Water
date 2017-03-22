@@ -17,13 +17,17 @@ Platform assembly: C:\Users\Public\Documents\Unity Projects\Sine Water\Sine-Wate
 Loading C:\Users\Public\Documents\Unity Projects\Sine Water\Sine-Water\exes\1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Public\Documents\Unity Projects\Sine Water\Sine-Water\exes\1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\Public\Documents\Unity Projects\Sine Water\Sine-Water\exes\1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.039 seconds
+- Completed reload, in  0.052 seconds
 Platform assembly: C:\Users\Public\Documents\Unity Projects\Sine Water\Sine-Water\exes\1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Public\Documents\Unity Projects\Sine Water\Sine-Water\exes\1_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.981449 ms
+UnloadTime: 1.504398 ms
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: ef8 -> priority: 1 
+  Thread -> id: 14a8 -> priority: 1 

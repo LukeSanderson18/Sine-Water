@@ -19,6 +19,14 @@ public class CamManager : MonoBehaviour {
         cam2.transform.localPosition = new Vector3(0, meshG.size * 0.5f, -meshG.size);
         lighthouse.transform.position = (Vector3.up-Vector3.one) * (meshG.size * 0.3f);
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Clicked();
+        }
+    }
+
     public void Clicked()
     {
         cam1.enabled = !cam1.enabled;
