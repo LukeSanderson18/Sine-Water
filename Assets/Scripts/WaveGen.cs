@@ -32,18 +32,15 @@ public class WaveGen : MonoBehaviour
 
         for (int i = 0; i < vertices.Length; i++)
         {
-           // print(GetComponent<MeshGen>().xRes + 2);
             if ((i % (xRes)) == 0)            //left edge
             {
-
                 vertices[i] = new Vector3(vertices[i + 1].x, -500, vertices[i + 1].z);
-
             }
             else if (i < xRes)    // bottom row
             {
                 vertices[i] = new Vector3(vertices[xRes].x, -500, vertices[xRes].z);
             }
-            else if (i % (xRes) == (xRes-1)) //right row
+            else if ((i % (xRes) == (xRes-1))) //right row
             {
                 vertices[i] = new Vector3(vertices[xRes-2].x, -500, vertices[xRes-2].z);
             }
